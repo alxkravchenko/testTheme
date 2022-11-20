@@ -3,7 +3,7 @@
 		<div class="nav">
 			<div class="header_nav offset_mob_mod">
 				{% for link in linklists.main-menu.links %}
-					<div class="heder_nav_item">
+					<div class="header_nav_item">
 						<a href="{{ link.url }}" class="header_nav_link">{{ link.title }}</a>
 					</div>
 				{% endfor %}
@@ -15,3 +15,17 @@
 		<div class="menu_trigger menuTrigger"></div>
 	</div>
 </header>
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.header.settings.logo.label"
+    }
+  ]
+}
+{% endschema %}
