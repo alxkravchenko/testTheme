@@ -1,12 +1,11 @@
 <header class="header">
 	<div class="section_in v2_mod flex_mod">
-		<a class="header_logo_w" href="{{ routes.root_url }}">
-			<img class="header_logo" src="i/logo.png" alt="Logo"/>
+      <a class="header_logo_w" href="#">
 			{{ section.settings.logo | image_url: width: 500 | image_tag:
 				class: 'header_logo',
 				alt: 'Logo'
 			}}
-		</a>
+      </a>
 		<div class="nav">
 			<div class="header_nav offset_mob_mod">
 				{% for link in linklists.main-menu.links %}
