@@ -10,6 +10,8 @@
       "footer": {
         "type": "footer",
         "settings": {
+          "logo": "shopify:\/\/shop_images\/Logo.png",
+          "logo_webp": "shopify:\/\/shop_images\/Logo.webp"
         }
       }
     },
