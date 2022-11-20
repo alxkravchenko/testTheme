@@ -2,8 +2,11 @@
 	<div class="section_in v2_mod flex_mod"><a class="header_logo_w" href="#"><img class="header_logo" src="i/logo.png" alt="Logo"/></a>
 		<div class="nav">
 			<div class="header_nav offset_mob_mod">
-				<div class="header_nav_item"><a class="header_nav_link" href="">Shop</a></div>
-				<div class="header_nav_item"><a class="header_nav_link" href="">Contacts</a></div>
+<!-- 				<div class="header_nav_item"><a class="header_nav_link" href="">Shop</a></div>
+				<div class="header_nav_item"><a class="header_nav_link" href="">Contacts</a></div> -->
+              {% for link in linklists.main-menu.links %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endfor %}
 			</div><a class="header_cart_btn" href="#">
 				<svg class="icon icon-bag size_mod">
 					<use xlink:href="i/sprite/sprite.svg#bag"></use>
