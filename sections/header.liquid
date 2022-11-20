@@ -1,13 +1,10 @@
 <header class="header">
 	<div class="section_in v2_mod flex_mod">
       <a class="header_logo_w" href="#">
-              {{ section.settings.logo | image_url: width: 500 | image_tag:
-                class: 'header__heading-logo',
-                widths: '50, 100, 150, 200, 250, 300, 400, 500',
-                height: logo_height,
-                width: section.settings.logo_width,
-                alt: logo_alt
-              }}
+			{{ section.settings.logo | image_tag:
+				class: 'header_logo',
+				alt: 'Logo'
+			}}
       </a>
 		<div class="nav">
 			<div class="header_nav offset_mob_mod">
