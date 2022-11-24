@@ -2,7 +2,8 @@
 	<div class="section_in v2_mod"><a class="footer_logo" href="{{ routes.root_url }}">
 			<picture class="header_logo">
 				<source srcset="{{ section.settings.logo_webp | img_url: 500 }}" type="image/webp"/>
-				<source srcset="{{ section.settings.logo | img_url: 500 }}" type="image/png"/><img class="cover_img" src="{{ section.settings.logo | img_url: 500 }}" alt=""/>
+				<source srcset="{{ section.settings.logo | img_url: 500 }}" type="image/png"/>
+				{{ section.settings.logo | img_url: 500 | img_tag: class: 'cover_img', alt: 'logo' }}
 			</picture></a></div>
 </footer>
 
