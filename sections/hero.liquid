@@ -1,21 +1,21 @@
 <section class="section hero_mod">
 	<picture class="hero_bg">
-		<source srcset="i/hero_bg.webp" type="image/webp"/>
-		<source srcset="i/hero_bg.jpg" type="image/jpg"/><img class="cover_img" src="i/hero_bg.jpg" alt=""/>
+		<source srcset="{{ section.settings.background_webp | img_url: 400 }}" type="image/webp"/>
+		<source srcset="{{ section.settings.background | img_url: 400 }}" type="image/jpg"/><img class="cover_img" src="{{ section.settings.background | img_url: 400 }}" alt=""/>
 	</picture>
 	<div class="section_in">
 		<div class="hero height_mod">
 			<picture class="decor pos_1_mod size_1_mod v1_mod">
-				<source srcset="i/decor_1.webp" type="image/webp"/>
-				<source srcset="i/decor_1.png" type="image/png"/><img class="cover_img" src="i/decor_1.png" alt=""/>
+				<source srcset="{{ section.settings.decor_1_webp | img_url: 400 }}" type="image/webp"/>
+				<source srcset="{{ section.settings.decor_1 | img_url: 400 }}" type="image/png"/><img class="cover_img" src="{{ section.settings.decor_1 | img_url: 400 }}" alt=""/>
 			</picture>
 			<picture class="decor pos_2_mod size_2_mod v2_mod">
-				<source srcset="i/decor_2.webp" type="image/webp"/>
-				<source srcset="i/decor_2.png" type="image/png"/><img class="cover_img" src="i/decor_2.png" alt=""/>
+				<source srcset="{{ section.settings.decor_2_webp | img_url: 400 }}" type="image/webp"/>
+				<source srcset="{{ section.settings.decor_2 | img_url: 400 }}" type="image/png"/><img class="cover_img" src="{{ section.settings.decor_2 | img_url: 400 }}" alt=""/>
 			</picture>
 			<picture class="decor pos_3_mod size_1_mod v3_mod">
-				<source srcset="i/decor_1.webp" type="image/webp"/>
-				<source srcset="i/decor_1.png" type="image/png"/><img class="cover_img" src="i/decor_1.png" alt=""/>
+				<source srcset="{{ section.settings.decor_1_webp | img_url: 400 }}" type="image/webp"/>
+				<source srcset="{{ section.settings.decor_1 | img_url: 400 }}" type="image/png"/><img class="cover_img" src="{{ section.settings.decor_1 | img_url: 400 }}" alt=""/>
 			</picture>
 			<h2 class="section_title lg_mod font_mod offset_mod">Don’t E<span class="size_in">F</span><span class="size_in_2">F</span> this up.</h2>
 			<div class="section_descr center_mod offset_mod">Create awesome content in one shot!</div>
@@ -24,8 +24,8 @@
 			</div>
 			<div class="hero_main">
 				<picture class="hero_img">
-					<source srcset="i/hero.webp" type="image/webp"/>
-					<source srcset="i/hero.png" type="image/png"/><img class="contain_img" src="i/hero.png" alt=""/>
+					<source srcset="{{ section.settings.hero_main_webp | img_url: 400 }}" type="image/webp"/>
+					<source srcset="{{ section.settings.hero_main | img_url: 400 }}" type="image/png"/><img class="contain_img" src="{{ section.settings.hero_main | img_url: 400 }}" alt=""/>
 				</picture>
 				<div class="hero_text">
 					<div class="hero_text_item"><strong>STURDY &</strong> PURDY</div>
@@ -35,9 +35,68 @@
 				</div>
 			</div>
 			<picture class="hero_logo">
-				<source srcset="i/logo.webp" type="image/webp"/>
-				<source srcset="i/logo.png" type="image/png"/><img class="cover_img" src="i/logo.png" alt=""/>
+				<source srcset="{{ section.settings.hero_logo_webp | img_url: 400 }}" type="image/webp"/>
+				<source srcset="{{ section.settings.hero_logo | img_url: 400 }}" type="image/png"/><img class="cover_img" src="{{ section.settings.hero_logo | img_url: 400 }}" alt=""/>
 			</picture>
 		</div>
 	</div>
 </section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "class": "section-hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background",
+      "label": "Hero background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_webp",
+      "label": "Hero background image(webp)"
+    },
+		{
+      "type": "image_picker",
+      "id": "decor_1",
+      "label": "Hero decor_1 image"
+    },
+		{
+      "type": "image_picker",
+      "id": "decor_1_webp",
+      "label": "Hero decor_1 image(webp)"
+    },
+		{
+      "type": "image_picker",
+      "id": "decor_2",
+      "label": "Hero decor_2 image"
+    },
+		{
+      "type": "image_picker",
+      "id": "decor_2_webp",
+      "label": "Hero decor_2 image(webp)"
+    },
+		{
+      "type": "image_picker",
+      "id": "hero_main",
+      "label": "Hero main image"
+    },
+		{
+      "type": "image_picker",
+      "id": "hero_main_webp",
+      "label": "Hero main image(webp)"
+    },
+		{
+      "type": "image_picker",
+      "id": "hero_logo",
+      "label": "Hero logo image"
+    },
+		{
+      "type": "image_picker",
+      "id": "hero_logo_webp",
+      "label": "Hero logo image(webp)"
+    }
+  ]
+}
+{% endschema %}

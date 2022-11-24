@@ -15,7 +15,8 @@
 				{% endfor %}
 			</div><a class="header_cart_btn" href="#">
 				<svg class="icon icon-bag size_mod">
-					<use xlink:href="i/sprite/sprite.svg#bag"></use>
+					{% comment %} <use xlink:href="i/sprite/sprite.svg#bag"></use> {% endcomment %}
+					<use xlink:href="{{ 'sprite.svg#bag' | asset_url }}"></use>
 				</svg></a>
 		</div>
 		<div class="menu_trigger menuTrigger"></div>
