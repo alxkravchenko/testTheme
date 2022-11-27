@@ -1,3 +1,39 @@
+/* @font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaNeue-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeue-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "DansHandWriting";
+  src: url("../fonts/DansHandWriting.woff2") format("woff2"), url("../fonts/DansHandWriting.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; } */
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("{{ 'HelveticaNeue.woff2' | asset_url }}") format("woff2"), url("{{ 'HelveticaNeue.woff' | asset_url }}") format("woff");
+	font-weight: 400;
+	font-style: normal; }
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("{{ 'HelveticaNeue-Bold.woff2' | asset_url }}") format("woff2"), url("{{ 'HelveticaNeue-Bold.woff' | asset_url }}") format("woff");
+	font-weight: 700;
+	font-style: normal; }
+
+@font-face {
+	font-family: "DansHandWriting";
+	src: url("{{ 'DansHandWriting.woff2' | asset_url }}") format("woff2"), url("{{ 'DansHandWriting.woff2' | asset_url }}") format("woff");
+	font-weight: 400;
+	font-style: normal; }
+
 .product_preview {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -331,24 +367,6 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   word-wrap: break-word; }
-
-@font-face {
-  font-family: "HelveticaNeue";
-  src: url("../fonts/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: "HelveticaNeue";
-  src: url("../fonts/HelveticaNeue-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeue-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: "DansHandWriting";
-  src: url("../fonts/DansHandWriting.woff2") format("woff2"), url("../fonts/DansHandWriting.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
 
 :root {
   --full-screen: calc(var(--vh, 1vh) * 100); }
