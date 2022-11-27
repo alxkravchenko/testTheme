@@ -17,7 +17,15 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "21474836472147483647": {
+        "type": "shopify:\/\/apps\/fontify-google-custom-fonts\/blocks\/app-embed\/334490e2-2153-4a2e-a452-e90bdeffa3cc",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
