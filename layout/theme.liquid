@@ -28,6 +28,7 @@
 
     {% render 'meta-tags' %}
 
+    {% comment %} <script src="{{ 'main.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {{ content_for_header }}
 
     {%- liquid
@@ -36,10 +37,8 @@
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
 
-    {% comment %} {{ 'main_global.css' | asset_url | stylesheet_tag }} {% endcomment %}
-
-    {{ 'fonts.css.liquid' | asset_url | stylesheet_tag }}
     {{ 'main_global.css' | asset_url | stylesheet_tag }}
+		{% comment %} <link type="text/css" href="{{ 'main_global.css' | asset_url }}" rel="stylesheet"> {% endcomment %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
