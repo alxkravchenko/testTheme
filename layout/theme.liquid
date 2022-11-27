@@ -38,6 +38,7 @@
 
     {% comment %} {{ 'main_global.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
+    {{ 'fonts.css.liquid' | asset_url | stylesheet_tag }}
     {{ 'main_global.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
