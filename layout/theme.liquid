@@ -38,7 +38,6 @@
     %}
 
     {{ 'main_global.css' | asset_url | stylesheet_tag }}
-		{% comment %} <link type="text/css" href="{{ 'main_global.css' | asset_url }}" rel="stylesheet"> {% endcomment %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
