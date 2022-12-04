@@ -1,10 +1,14 @@
 <footer class="footer">
-	<div class="section_in v2_mod"><a class="footer_logo" href="{{ routes.root_url }}">
-			<picture class="header_logo">
-				<source srcset="{{ section.settings.logo_webp | img_url: 500 }}" type="image/webp"/>
-				<source srcset="{{ section.settings.logo | img_url: 500 }}" type="image/png"/>
-				{{ section.settings.logo | img_url: 500 | img_tag: class: 'cover_img', alt: 'logo' }}
-			</picture></a></div>
+	<div class="section_in v2_mod">
+		<a class="footer_logo" href="{{ routes.root_url }}">
+			<div class="header_logo">
+				{{ section.settings.logo  | image_url: width: 400 | image_tag:
+					class: 'cover_img',
+					alt: 'Logo'
+				}}
+			</div>
+		</a>
+	</div>
 </footer>
 
 {% schema %}
@@ -16,11 +20,6 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Footer logo image"
-    },
-    {
-      "type": "image_picker",
-      "id": "logo_webp",
-      "label": "Footer logo image(webp)"
     }
   ]
 }
