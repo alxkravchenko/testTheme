@@ -27,13 +27,18 @@
 				}}
 			</div>
 			<h2 class="section_title lg_mod font_mod offset_mod">Don’t E<span class="size_in">F</span><span class="size_in_2">F</span> this up.</h2>
-			<div class="section_descr center_mod offset_mod">Create awesome content in one shot!</div>
+			{% comment %} <div class="section_descr center_mod offset_mod">Create awesome content in one shot!</div> {% endcomment %}
+			{%- for block in section.blocks -%}
+				{%- if block.type == 'description' and block.settings.description_1 != blank -%}
+					<div class="section_descr center_mod offset_mod">{{ block.settings.description_1 }}</div>
+				{%- endif -%}
+			{%- endfor -%}
 			<div class="btn_wrap center_mod offset_mod pos_mod"><a class="btn_base mob_sm_mod" href="#">Shop If Prompted</a>
 				<div class="btn_pointer">Buy This!</div>
 			</div>
 			<div class="hero_main">
 				<div class="hero_img">
-					{{ section.settings.hero_main  | image_url: width: 400 | image_tag:
+					{{ section.settings.hero_main  | image_url: width: 710 | image_tag:
 						class: 'contain_img',
 						alt: 'Hero main img'
 					}}
@@ -77,6 +82,11 @@
     },
 		{
       "type": "image_picker",
+      "id": "decor_3",
+      "label": "Hero decor_3 image"
+    },
+		{
+      "type": "image_picker",
       "id": "hero_main",
       "label": "Hero main image"
     },
@@ -85,6 +95,20 @@
       "id": "hero_logo",
       "label": "Hero logo image"
     }
-  ]
+  ],
+	"blocks": [
+		{
+			"name": "Description",
+			"type": "description",
+			"settings": [
+				{
+					"type": "text",
+					"id": "description_1",
+					"label": "Description text"
+				}
+			]
+		}
+	]
+
 }
 {% endschema %}
